@@ -2,17 +2,14 @@
 add_action('admin_init', 'theme_options_init');
 add_action('admin_menu', 'theme_options_add_page');
 
-// Einstellungen registrieren (http://codex.wordpress.org/Function_Reference/register_setting)
 function theme_options_init() {
     register_setting('kb_options', 'kb_theme_options', 'kb_validate_options');
 }
 
-// Seite in der Dashboard-Navigation erstellen
 function theme_options_add_page() {
     add_theme_page('Optionen', 'Optionen', 'edit_theme_options', 'theme-optionen', 'kb_theme_options_page'); // Seitentitel, Titel in der Navi, Berechtigung zum Editieren (http://codex.wordpress.org/Roles_and_Capabilities) , Slug, Funktion
 }
 
-// Optionen-Seite erstellen
 function kb_theme_options_page() {
     global $select_options, $radio_options;
     if (!isset($_REQUEST['settings-updated']))
@@ -39,6 +36,10 @@ function kb_theme_options_page() {
                 <tr valign="top">
                     <th scope="row">Eigenes Stammeslogo<br /><small>Bitte binde eine URL von deinem Stammeslogo ein. Du kannst es vorher unter "Medien" hochladen.</small></th>
                     <td><input type="text" id="kb_theme_options[slURL]" name="kb_theme_options[slURL]" value="<?php echo esc_textarea($options['slURL']); ?>" placeholder="/wp-content/logo.png" /></td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row">F&F Referal Banner aktivieren?<br /><small>Mehr Infos <a href="http://www.fahrtenbedarf.de/ff-shopseiten/rabatte_fuer_linktausch_bei_freizeit_und_fahrtenbedarf.html" target="_blank">*hier*</a>.</small></th>
+                    <td><input type="checkbox" id="kb_theme_options[fahrtenbedarfRef]" name="kb_theme_options[fahrtenbedarfRef]" <?php echo ($options['fahrtenbedarfRef'] ? 'checked' : ''); ?> /></td>
                 </tr>
             </table>
             <p class="submit"><input type="submit" class="button-primary" value="Einstellungen speichern" /></p>

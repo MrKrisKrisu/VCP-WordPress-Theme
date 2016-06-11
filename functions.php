@@ -37,3 +37,15 @@ function printStammeslogo() {
         return;
     echo '<img src="' . $options['slURL'] . '" id="stammeslogo"/>';
 }
+
+function printFahrtenbedarfReferal() {
+    $options = get_option('kb_theme_options');
+    if (!isset($options['fahrtenbedarfRef']) || !$options['fahrtenbedarfRef'])
+        return;
+    echo '  <div>
+                <h3 class="widgettitle">Unser Ausrüster</h3>
+                <a href="http://www.fahrtenbedarf.de/">
+                    <img src="https://vcp-muenden.de/wp-content/uploads/2015/12/ff-banner-vcp480.gif" class="alignnone">
+                </a>
+            </div>';
+}
