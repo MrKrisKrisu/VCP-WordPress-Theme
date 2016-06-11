@@ -19,3 +19,4 @@
             </div>
             <nav><div class="container"><?php wp_nav_menu(array('theme_location' => 'main-menu', 'depth' => '2')); ?></div></nav>
         </header>
+        <div class="container">
