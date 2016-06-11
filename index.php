@@ -7,14 +7,12 @@
             if (have_posts()) {
                 while (have_posts()) : the_post();
                     ?>
-                    <div class="news">
+                    <section class="news">
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <span class="author" style="display: none;">Geschrieben von <?php the_author(); ?> am <?php the_date("d.m.Y"); ?></span>
-                        <!-- TODO: Featured Image -->
                         <article><?php the_excerpt(); ?></article>
                         <div class="clear"></div>
                         <hr class="newsDivider" />
-                    </div>
+                    </section>
                     <?php
                 endwhile;
             }
