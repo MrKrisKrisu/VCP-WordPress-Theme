@@ -135,6 +135,12 @@ main h1, main h2, main h3, main h4, main h5, main h6, main h1 a, main h2 a, main
 main hr { border: #004287 solid 1px; }
 main a { color: #004287; }
 
+#authorBox .avatar {
+    float: left;
+    margin-right: 20px;
+}
+
+
 /*      Footer                  */
 footer {
     background-color: #cdd1ca;
