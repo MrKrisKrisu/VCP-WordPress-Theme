@@ -75,7 +75,7 @@ function kb_theme_options_page() {
         $_REQUEST['settings-updated'] = false;
     ?>
     <div class="wrap">
-        <?php screen_icon(); ?><h2>Theme-Optionen</h2>
+        <?php screen_icon(); ?><h2>VCP Theme Einstellungen</h2>
 
         <?php if (false !== $_REQUEST['settings-updated']) : ?>
             <div class="updated fade">
@@ -88,19 +88,18 @@ function kb_theme_options_page() {
             <?php $options = get_option('kb_theme_options'); ?>
 
             <table class="form-table">
-                <!--<tr valign="top">
-                    <th scope="row">F&F Reflink einbinden?</th>
-                    <td><input type="checkbox" id="kb_theme_options[fundflink]" name="kb_theme_options[fundflink]" value="<?php esc_attr_e($options['fundflink']); ?>" /></td>
-                </tr>-->
                 <tr valign="top">
                     <th scope="row">Google Analytics</th>
                     <td><input type="text" id="kb_theme_options[gaId]" name="kb_theme_options[gaId]" value="<?php echo esc_textarea($options['gaId']); ?>" placeholder="UA-12345678-1" /></td>
                 </tr>
+                <tr valign="top">
+                    <th scope="row">Eigenes Stammeslogo<br /><small>Bitte binde eine URL von deinem Stammeslogo ein. Du kannst es vorher unter "Medien" hochladen.</small></th>
+                    <td><input type="text" id="kb_theme_options[slURL]" name="kb_theme_options[slURL]" value="<?php echo esc_textarea($options['slURL']); ?>" placeholder="/wp-content/logo.png" /></td>
+                </tr>
             </table>
-
-            <!-- submit -->
             <p class="submit"><input type="submit" class="button-primary" value="Einstellungen speichern" /></p>
         </form>
+        <span style="float: right;"><small>Das Design wird zur Verfügung gestellt von <a href="http://vcp-muenden.de/" target="_blank">Kristian Stöckel</a>.</small></span>
     </div>
     <?php
 }
@@ -133,4 +132,11 @@ function printGoogleAnalyticsCode() {
 
     </script>
     <?php
+}
+
+function printStammeslogo() {
+    $options = get_option('kb_theme_options');
+    if (!isset($options['slURL']) || $options['slURL'] === '')
+        return;
+    echo '<img src="' . $options['slURL'] . '" id="stammeslogo"/>';
 }
