@@ -31,3 +31,6 @@ if (isset($options['gaId']) && $options['gaId'] != '') {
     </script>
     <?php
 }
+?>
+</body>
+</html>
