@@ -39,46 +39,6 @@ header #subtitle {
     color: #fff;
 }
 
-/*      Header Navigation       */
-/*header nav {
-    width: 100%;
-    height: 36px;
-    position: relative;
-    background-image: url('style/images/overlay.png');
-    margin-top: 19px;
-}
-header nav ul {
-    display: block;
-    margin-left: 26px;
-}
-header nav ul li {
-    list-style: none;
-    display: inline;
-    margin: 0;
-}
-header nav ul li a {
-    color: #ececec;
-    text-decoration: none;
-    line-height: 2.500em;
-    padding: 0.75em 1em 0.75em 1em;
-    transition: background 0.2s;
-    margin: 0;
-}
-header nav ul li a:hover{
-    background-color: #E94653;
-    color: #ffffff;
-}
-header nav ul .current-menu-item a {
-    background-color: #FECF16;
-    color: #000;
-}
-header nav ul .current-menu-item a:hover{
-    background-color: #E94653;
-    color: #ffffff;
-}
-
-*/
-
 header nav{
     width: 100%;
     height: 36px;
@@ -153,12 +113,6 @@ header nav ul li ul.sub-menu li:hover a{
     text-decoration: none;
 }
 
-
-
-
-
-
-
 /*      Sidebar                 */
 aside #sidebar li { list-style-type: none; }
 aside #sidebar .widget {
@@ -166,12 +120,6 @@ aside #sidebar .widget {
     margin-bottom: 10px;
 }
 aside .widgettitle { color: #004287; }
-
-
-
-
-
-
 
 
 /*      Main                    */
@@ -185,11 +133,6 @@ main .content .title {
 main h1, main h2, main h3, main h4, main h5, main h6, main h1 a, main h2 a, main h3 a, main h4 a, main h5 a, main h6 a { color: #004287; }
 main hr { border: #004287 solid 1px; }
 main a { color: #004287; }
-
-
-
-
-
 
 /*      Footer                  */
 footer {
