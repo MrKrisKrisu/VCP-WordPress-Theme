@@ -1,0 +1,211 @@
+/*
+Theme Name: VCP Open Source
+Theme URI: http://vcp-muenden.de/
+Description: Simples Open Source Template für VCP Stämme
+Author: Kristian Stöckel
+Author URI: http://vcp-muenden.de/
+*/
+
+body {
+    background-color: #f0f4f6;
+}
+
+
+/*      Header                  */
+header {
+    padding: 10px 0;
+    background-color: #004287;
+    height: 170px;
+    position: relative;
+
+    background: #004287;
+    background: -webkit-linear-gradient(#004287, #00b0eb);
+    background: -o-linear-gradient(#004287, #00b0eb);
+    background: -moz-linear-gradient(#004287, #00b0eb);
+    background: linear-gradient(#004287, #00b0eb);
+}
+header #logo {
+    height: 100px;
+    margin-top: 5px;
+}
+header #logoRight {
+    position: absolute;
+    right: 5%;
+    height: 150px;
+    z-index: 20000;
+}
+header #subtitle {
+    font-size: 30px;
+    color: #fff;
+}
+
+/*      Header Navigation       */
+/*header nav {
+    width: 100%;
+    height: 36px;
+    position: relative;
+    background-image: url('style/images/overlay.png');
+    margin-top: 19px;
+}
+header nav ul {
+    display: block;
+    margin-left: 26px;
+}
+header nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 0;
+}
+header nav ul li a {
+    color: #ececec;
+    text-decoration: none;
+    line-height: 2.500em;
+    padding: 0.75em 1em 0.75em 1em;
+    transition: background 0.2s;
+    margin: 0;
+}
+header nav ul li a:hover{
+    background-color: #E94653;
+    color: #ffffff;
+}
+header nav ul .current-menu-item a {
+    background-color: #FECF16;
+    color: #000;
+}
+header nav ul .current-menu-item a:hover{
+    background-color: #E94653;
+    color: #ffffff;
+}
+
+*/
+
+header nav{
+    width: 100%;
+    height: 36px;
+    position: relative;
+    background-image: url('style/images/overlay.png');
+    margin-top: 19px;
+    padding-left: 0;
+}
+header nav ul{
+    list-style: none;
+    display: block;
+}
+header #menu-oben {
+    padding-left: 0;
+}
+header nav ul li{
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s;
+    -webkit-transition: background 0.3s;
+    list-style: none;
+    margin: 0;
+    color: #cecece;
+}
+header nav ul .current-menu-item a {
+    background-color: #FECF16;
+    color: #000;
+}
+header nav ul li:hover a {
+    background-color: #E94653;
+    color: #cecece;
+    text-decoration: none;
+}
+header nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    line-height: 2.500em;
+    padding: 0.75em 1em 0.75em 1em;
+    transition: background 0.2s;
+    margin: 0;
+}
+
+/*      Nav Dropdown            */
+header nav ul li ul.sub-menu{
+    z-index: 1;
+    display: none;
+    position: absolute;
+}
+header nav ul li:hover ul.sub-menu{
+    display: block;
+    list-style: none;
+    background-image: url('style/images/overlay.png');
+    background-color: rgba(0, 185, 242, 0.9);
+    color: #cecece;
+    margin-left: 0px;
+}
+header nav ul li:hover ul.sub-menu li{
+    display: block;
+    margin-left: -40px;
+    color: #cecece;
+}
+header nav ul li ul.sub-menu li a{
+    display: block;
+    color: #cecece;
+    padding: 2px 10px;
+    background-color: rgba(0,0,0,0);
+    min-width: 160px;
+}
+header nav ul li ul.sub-menu li:hover a{
+    color: #cecece;
+    background-color: #E94653;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/*      Sidebar                 */
+aside #sidebar li { list-style-type: none; }
+aside #sidebar .widget {
+    border-bottom: #004287 solid 2px;
+    margin-bottom: 10px;
+}
+aside .widgettitle { color: #004287; }
+
+
+
+
+
+
+
+
+/*      Main                    */
+main .news .author {
+    margin: -20px 0 20px 0;
+}
+main .content .title {
+    color: #004287;
+    border-bottom: #004287 solid 2px;
+}
+main h1, main h2, main h3, main h4, main h5, main h6, main h1 a, main h2 a, main h3 a, main h4 a, main h5 a, main h6 a { color: #004287; }
+main hr { border: #004287 solid 1px; }
+main a { color: #004287; }
+
+
+
+
+
+
+/*      Footer                  */
+footer {
+    background-color: #cdd1ca;
+    min-height: 240px;
+}
+footer .container { padding: 15px 0 15px 0; }
+footer .widgettitle {
+    margin-top: 0px;
+    color: #004287;
+}
+footer a { color: #004287; }
+
+
+/*      Other                   */
+.clear { clear: both; }
+img { max-width: 100%; }
+.alignleft { float: left; }
+.alignright { float: right; }
