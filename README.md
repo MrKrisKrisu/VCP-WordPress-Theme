@@ -8,6 +8,5 @@ Benutzt es gerne, dafür ist es auch hier. Wenn ihr Verbesserungen seht, freue i
 
 ToDo
 -------------------------
-* F&F Reflink
 * Featured Image auf Startseite
 * Lightbox
